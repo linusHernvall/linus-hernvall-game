@@ -123,3 +123,51 @@ function getDeclineAgent() {
     buttonOption1.addEventListener('click', getStartScene);
 }
 
+/** gets the scene if the user chooses "One More Minute" */
+function getOneMoreMinute() {
+    storyText.textContent = "The time has come for the first tour with your new band. The gig at the first stop is a true \
+    smash and some fans invites you to a wicked party after the gig.";
+
+    buttonOption1.textContent = 'Follow the fans to the party';
+    buttonOption1.addEventListener('click', getParty);
+    
+    buttonOption2.textContent = 'Go to the tour bus and sleep instead';
+    buttonOption2.addEventListener('click', getOneMoreMinuteSleep);
+}
+
+/** gets the scene if the user chooses "Heartless" */
+function getHeartless() {
+    storyText.textContent = "The time has come for the first tour with your new band. The gig at the first stop is a true \
+    smash and some fans invites you to a wicked party after the gig.";
+
+    buttonOption1.textContent = 'Follow the fans to the party';
+    buttonOption1.addEventListener('click', getParty);
+    
+    buttonOption2.textContent = 'Go to the tour bus and sleep instead';
+    buttonOption2.addEventListener('click', getHeartlessSleep);
+}
+
+/** gets the scene if the user chooses "Party" */
+function getParty() {
+    storyText.textContent = "The party is really wild. You get really drunk and makes a stupid decision to do some cocaine. \
+    Unluckily the cocaine is spiked with high concentrations of fentanyl and you're dying of an overdose this night.";
+
+    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
+    buttonOption1.addEventListener('click', getStartScene);
+}
+
+/** gets the scene if the user chooses "One More Minute - Sleep" */
+function getOneMoreMinuteSleep() {
+    storyText.textContent = "The time goes on with you and the band. Unfortunatly you never manage to write a real hit song and \
+    never makes it to the top. You end up taking a regular day job and your dream of becoming a rockstar is shattered.";
+
+    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
+    buttonOption1.addEventListener('click', getStartScene);
+}
+
+/** gets the scene if the user chooses "Heartless - Sleep" */
+function getOneMoreMinuteSleep() {
+    storyText.textContent = "The time goes on with you and the band and the 'Heartless' that you wrote becomes a megahit. \
+    It's topping all the big lists all over the world. The money keeps on coming and your're now able to dedicate \
+    // your whole life to what you really love - playing music. Your dreams of becoming a true rockstar are fullfilled!!!";
+}
