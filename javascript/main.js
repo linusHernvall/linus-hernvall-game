@@ -1,11 +1,17 @@
 window.addEventListener("DOMContentLoaded", main);
 
+/** FIXA HEARTLESS PARTY - FUNKAR EJ
+ * FUNKTIONER I BOTTEN? 
+/
+
 /** @type {HTMLParagraphElement} shows a p-tag with the current scene */
 let storyText;
 /** @type {HTMLButtonElement} gives the user the first option to choose from in every scene  */
 let buttonOption1;
 /** @type {HTMLButtonElement} gives the user the second option to choose from in every scene  */
 let buttonOption2;
+/** @type {HTMLImageElement} sets the scene image */
+let displayImage;
 
 /** gets the HTML-elements and the start scene */
 function main() {
@@ -18,6 +24,7 @@ function getHtmlElements() {
     storyText = document.getElementById('text-story');
     buttonOption1 = document.getElementById('btn-option1');
     buttonOption2 = document.getElementById('btn-option2');
+    displayImage = document.getElementById ('scene-img');
 }
 
 /** gets the first scene - the user's first path selection   */
@@ -30,6 +37,10 @@ function getStartScene() {
     
     buttonOption2.textContent = 'Drums';
     buttonOption2.addEventListener('click', getDrums);
+
+    displayImage.src = "images/music-store.jpg"
+    
+
 }
 
 /** gets the scene if the user chooses "Guitar" */
@@ -43,6 +54,8 @@ function getGuitar() {
     
     buttonOption2.textContent = 'Play video games';
     buttonOption2.addEventListener('click', getGuitarGames);
+
+    // displayImage.src = "images/wtf-back.jpeg"
 }
 
 /** gets the scene if the user chooses "Drums" */
@@ -54,6 +67,8 @@ function getDrums() {
     buttonOption1.textContent = 'Practice drums';
     buttonOption1.addEventListener('click', getDrumsPractice);
     
+    buttonOption2.removeEventListener('click',getDrums)
+
     buttonOption2.textContent = 'Play video games';
     buttonOption2.addEventListener('click', getDrumsGames);
 }
@@ -138,7 +153,7 @@ function getOneMoreMinute() {
 
     buttonOption1.textContent = 'Follow the fans to the party';
     buttonOption1.addEventListener('click', getOneMoreMinuteParty);
-    
+
     buttonOption2.textContent = 'Go to the tour bus and sleep instead';
     buttonOption2.addEventListener('click', getOneMoreMinuteSleep);
 }
@@ -208,3 +223,7 @@ function getHeartlessSleep() {
 function refreshPage() {
     window.location.reload();
 }
+
+// function displayImage() {
+//     document.getElementById('scene-img').src = "/images/music-store.jpg";
+// }
