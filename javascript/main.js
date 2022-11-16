@@ -166,7 +166,7 @@ function getOneMoreMinuteSleep() {
 }
 
 /** gets the scene if the user chooses "Heartless - Sleep" */
-function getOneMoreMinuteSleep() {
+function getHeartlessSleep() {
     storyText.textContent = "The time goes on with you and the band and the 'Heartless' that you wrote becomes a megahit. \
     It's topping all the big lists all over the world. The money keeps on coming and your're now able to dedicate \
     // your whole life to what you really love - playing music. Your dreams of becoming a true rockstar are fullfilled!!!";
