@@ -33,13 +33,12 @@ function getStartScene() {
     decide if you want to start to play guitar or drums.";
 
     buttonOption1.textContent = 'Guitar';
-    buttonOption1.addEventListener('click', getGuitar);
+    buttonOption1.onclick = getGuitar;
     
     buttonOption2.textContent = 'Drums';
-    buttonOption2.addEventListener('click', getDrums);
+    buttonOption2.onclick = getDrums;
 
-    displayImage.src = "images/music-store.jpg"
-    
+    // displayImage.src = "images/music-store.jpg"
 
 }
 
@@ -50,10 +49,10 @@ function getGuitar() {
     video games at this moment.";
 
     buttonOption1.textContent = 'Practice guitar';
-    buttonOption1.addEventListener('click', getGuitarPractice);
+    buttonOption1.onclick = getGuitarPractice;
     
     buttonOption2.textContent = 'Play video games';
-    buttonOption2.addEventListener('click', getGuitarGames);
+    buttonOption2.onclick = getGuitarGames;
 
     // displayImage.src = "images/wtf-back.jpeg"
 }
@@ -65,12 +64,12 @@ function getDrums() {
     video games at this moment.";
 
     buttonOption1.textContent = 'Practice drums';
-    buttonOption1.addEventListener('click', getDrumsPractice);
+    buttonOption1.onclick = getDrumsPractice;
     
     buttonOption2.removeEventListener('click',getDrums)
 
     buttonOption2.textContent = 'Play video games';
-    buttonOption2.addEventListener('click', getDrumsGames);
+    buttonOption2.onclick = getDrumsGames;
 }
 
 /** gets the scene if the user chooses "Practice guitar" */
@@ -80,10 +79,10 @@ function getGuitarPractice() {
     approaches you with an offer to join a much bigger band who's on their way up to success.";
 
     buttonOption1.textContent = 'Accept the offer';
-    buttonOption1.addEventListener('click', getAcceptAgent);
+    buttonOption1.onclick = getAcceptAgent;
     
     buttonOption2.textContent = 'Decline the offer';
-    buttonOption2.addEventListener('click', getDeclineAgent);
+    buttonOption2.onclick = getDeclineAgent;
 }
 
 /** gets the scene if the user chooses "Play video games" */
@@ -93,7 +92,7 @@ function getGuitarGames() {
     guitar away and end your dreams of becoming a rockstar.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -106,7 +105,7 @@ function getDrumsPractice() {
     completely broken and you soon decides to quit playing drums";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -118,7 +117,7 @@ function getDrumsGames() {
     drums away and end your dreams of becoming a rockstar.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -129,10 +128,10 @@ function getAcceptAgent() {
     to write two new songs. You're not sure which of the songs you're going to put the most effort into.";
 
     buttonOption1.textContent = 'One More Minute';
-    buttonOption1.addEventListener('click', getOneMoreMinute);
+    buttonOption1.onclick = getOneMoreMinute;
     
     buttonOption2.textContent = 'Heartless';
-    buttonOption2.addEventListener('click', getHeartless);
+    buttonOption2.onclick = getHeartless;
 }
 
 /** gets the scene if the user chooses "Decline the offer" */
@@ -141,7 +140,7 @@ function getDeclineAgent() {
     to the next level. The time goes by and your interest in music fades away.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -152,10 +151,10 @@ function getOneMoreMinute() {
     smash and some fans invites you to a wicked party after the gig.";
 
     buttonOption1.textContent = 'Follow the fans to the party';
-    buttonOption1.addEventListener('click', getOneMoreMinuteParty);
+    buttonOption1.onclick = getOneMoreMinuteParty;
 
     buttonOption2.textContent = 'Go to the tour bus and sleep instead';
-    buttonOption2.addEventListener('click', getOneMoreMinuteSleep);
+    buttonOption2.onclick = getOneMoreMinuteSleep;
 }
 
 /** gets the scene if the user chooses "Heartless" */
@@ -164,10 +163,10 @@ function getHeartless() {
     smash and some fans invites you to a wicked party after the gig.";
 
     buttonOption1.textContent = 'Follow the fans to the party';
-    buttonOption1.addEventListener('click', getHeartlessParty);
+    buttonOption1.onclick = getHeartlessParty;
     
     buttonOption2.textContent = 'Go to the tour bus and sleep instead';
-    buttonOption2.addEventListener('click', getHeartlessSleep);
+    buttonOption2.onclick = getHeartlessSleep;
 }
 
 /** gets the scene if the user chooses "One More Minute - Party" */
@@ -176,7 +175,7 @@ function getOneMoreMinuteParty() {
     Unluckily the cocaine is spiked with high concentrations of fentanyl and you're dying of an overdose this night.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -187,7 +186,7 @@ function getHeartlessParty() {
     Unluckily the cocaine is spiked with high concentrations of fentanyl and you're dying of an overdose this night.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -198,7 +197,7 @@ function getOneMoreMinuteSleep() {
     never makes it to the top. You end up taking a regular day job and your dream of becoming a rockstar is shattered.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
@@ -210,7 +209,7 @@ function getHeartlessSleep() {
     your whole life to what you really love - playing music. Your dreams of becoming a true rockstar are fullfilled!!!";
 
     buttonOption1.textContent = "Let's do this again!";
-    buttonOption1.addEventListener('click', refreshPage);
+    buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
 }
