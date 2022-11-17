@@ -38,7 +38,7 @@ function getStartScene() {
     buttonOption2.textContent = 'Drums';
     buttonOption2.onclick = getDrums;
 
-    // displayImage.src = "images/music-store.jpg"
+    displayImage.src = "images/music-store.jpg"
 
 }
 
