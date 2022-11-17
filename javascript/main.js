@@ -290,6 +290,8 @@ function getHeartlessSleep() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+    
+    displayImage.src = "./images/rockstar.jpeg"
 }
 
 function refreshPage() {
