@@ -38,7 +38,7 @@ function getStartScene() {
     buttonOption2.textContent = 'Drums';
     buttonOption2.onclick = getDrums;
 
-    displayImage.src = "images/music-store.jpg"
+    displayImage.src = "./images/music-store.jpg"
 
 }
 
@@ -56,7 +56,7 @@ function getGuitar() {
     buttonOption2.textContent = 'Play video games';
     buttonOption2.onclick = getGuitarGames;
 
-    // displayImage.src = "images/wtf-back.jpeg"
+    displayImage.src = "./images/guitar-practice.jpg"
 }
 
 /** gets the scene if the user chooses "Practice guitar" */
@@ -69,6 +69,8 @@ function getGuitarPractice() {
     
     buttonOption2.textContent = "Contact the band";
     buttonOption2.onclick = getGuitarBand;
+
+    displayImage.src = "./images/guitar.jpg"
 }
 
 /** gets the scene if the user chooses "Play video games" */
@@ -79,6 +81,8 @@ function getGuitarGames() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/video-games.jpg"
 }
 
 /** gets the scene if the user chooses "Think I'll be better off solo" */
@@ -90,6 +94,8 @@ function getGuitarSolo() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/guitar-solo.jpg"
 }
 
 /** gets the scene if the user chooses "Contact the band" */
@@ -103,6 +109,8 @@ function getGuitarBand() {
     
     buttonOption2.textContent = 'Decline the offer';
     buttonOption2.onclick = getDeclineAgent;
+
+    displayImage.src = "./images/concert.jpg"
 }
 
 // DRUMS
@@ -118,6 +126,8 @@ function getDrums() {
 
     buttonOption2.textContent = 'Play video games';
     buttonOption2.onclick = getDrumsGames;
+
+    displayImage.src = "./images/drums.jpg"
 }
 
 /** gets the scene if the user chooses "Practice drums" */
@@ -130,6 +140,8 @@ function getDrumsPractice() {
     
     buttonOption2.textContent = "Contact the band";
     buttonOption2.onclick = getDrumsBand;
+
+    displayImage.src = "./images/drums-practice.jpg"
 }
 
 /** gets the scene if the user chooses "Play video games" */
@@ -140,6 +152,8 @@ function getDrumsGames() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/video-games.jpg"
 }
 
 /** gets the scene if the user chooses "Think I'll be better off solo" */
@@ -151,19 +165,23 @@ function getDrumsSolo() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/drums-solo.jpg"
 }
 
-/** gets the scene if the user chooses "Practice drums" */
+/** gets the scene if the user chooses "Contact the band" */
 function getDrumsBand() {
     storyText.textContent = "It's time for a gig with your band. Fortunately you've been practicing a lot, so you perform at your \
     highest level. After the gig an agent approaches the band, he's looking for a new guitarist. \
     The lead guitarist of your band accepts his offer and quits your band on the spot. This leaves you \
-    completely broken and you soon decides to quit playing drums";
+    completely broken and you soon decides to quit playing drums.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/concert.jpg"
 }
 
 // FOLLOWING
@@ -178,6 +196,8 @@ function getAcceptAgent() {
     
     buttonOption2.textContent = 'Heartless';
     buttonOption2.onclick = getHeartless;
+
+    displayImage.src = "./images/guitar-song.jpg"
 }
 
 /** gets the scene if the user chooses "Decline the offer" */
@@ -189,6 +209,8 @@ function getDeclineAgent() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/decline.jpg"
 }
 
 /** gets the scene if the user chooses "One More Minute" */
@@ -201,6 +223,8 @@ function getOneMoreMinute() {
 
     buttonOption2.textContent = 'Go to the tour bus and sleep instead';
     buttonOption2.onclick = getOneMoreMinuteSleep;
+
+    displayImage.src = "./images/big-gig.jpg"
 }
 
 /** gets the scene if the user chooses "Heartless" */
@@ -213,6 +237,8 @@ function getHeartless() {
     
     buttonOption2.textContent = 'Go to the tour bus and sleep instead';
     buttonOption2.onclick = getHeartlessSleep;
+
+    displayImage.src = "./images/big-gig.jpg"
 }
 
 /** gets the scene if the user chooses "One More Minute - Party" */
@@ -224,6 +250,8 @@ function getOneMoreMinuteParty() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/party.jpg"
 }
 
 /** gets the scene if the user chooses "Heartless - Party" */
@@ -235,6 +263,8 @@ function getHeartlessParty() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/party.jpg"
 }
 
 /** gets the scene if the user chooses "One More Minute - Sleep" */
@@ -246,6 +276,8 @@ function getOneMoreMinuteSleep() {
     buttonOption1.onclick = refreshPage;
 
     buttonOption2.style.display = 'none';
+
+    displayImage.src = "./images/sunset.jpg"    
 }
 
 /** gets the scene if the user chooses "Heartless - Sleep" */
@@ -259,16 +291,7 @@ function getHeartlessSleep() {
 
     buttonOption2.style.display = 'none';
 }
-/** shows picture to the right scene */
-// function addImage() {
-//     let img = document.createElement('img');
-//     img.src 
-// }
 
 function refreshPage() {
     window.location.reload();
 }
-
-// function displayImage() {
-//     document.getElementById('scene-img').src = "/images/music-store.jpg";
-// }
