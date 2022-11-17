@@ -59,21 +59,7 @@ function getGuitar() {
     // displayImage.src = "images/wtf-back.jpeg"
 }
 
-/** gets the scene if the user chooses "Drums" */
-function getDrums() {
-    storyText.textContent = "Some months have passed since you got your drums. It's starting to get pretty hard and it \
-    demands further practicing for you to get any better. It would be easier and much more fun to play \
-    video games at this moment.";
-
-    buttonOption1.textContent = 'Practice drums';
-    buttonOption1.onclick = getDrumsPractice;
-    
-    buttonOption2.removeEventListener('click',getDrums)
-
-    buttonOption2.textContent = 'Play video games';
-    buttonOption2.onclick = getDrumsGames;
-}
-
+/** gets the scene if the user chooses "Practice guitar" */
 function getGuitarPractice() {
     storyText.textContent = "Your skills are getting better and better. You come across an ad for a band who’s\
     searching for a new band member.";
@@ -86,8 +72,18 @@ function getGuitarPractice() {
 }
 
 /** gets the scene if the user chooses "Play video games" */
+function getGuitarGames() {
+    storyText.textContent = "A rockstar is not created through playing video games. You need to practice, practice, practice…";
+
+    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
+    buttonOption1.onclick = refreshPage;
+
+    buttonOption2.style.display = 'none';
+}
+
+/** gets the scene if the user chooses "Think I'll be better off solo" */
 function getGuitarSolo() {
-    storyText.textContent = "You're still getting as a solo artist, but you'll \
+    storyText.textContent = "You're still getting on as a solo artist, but you'll \
     need to be a part of something bigger to be able to reach your dreams.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
@@ -96,7 +92,7 @@ function getGuitarSolo() {
     buttonOption2.style.display = 'none';
 }
 
-/** gets the scene if the user chooses "Practice guitar" */
+/** gets the scene if the user chooses "Contact the band" */
 function getGuitarBand() {
     storyText.textContent = "It's time for a gig with your band. Fortunately you've been practicing a lot, so you perform at your \
     highest level. An agent had his eyes on you the whole evening and he really liked what he saw. He \
@@ -109,27 +105,31 @@ function getGuitarBand() {
     buttonOption2.onclick = getDeclineAgent;
 }
 
-/** gets the scene if the user chooses "Play video games" */
-function getGuitarGames() {
-    storyText.textContent = "A rockstar is not created through playing video games. You need to practice, practice, practice…";
+// DRUMS
 
-    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+/** gets the scene if the user chooses "Drums" */
+function getDrums() {
+    storyText.textContent = "Some months have passed since you got your drums. It's starting to get pretty hard and it \
+    demands further practicing for you to get any better. It would be easier and much more fun to play \
+    video games at this moment.";
 
-    buttonOption2.style.display = 'none';
+    buttonOption1.textContent = 'Practice drums';
+    buttonOption1.onclick = getDrumsPractice;
+
+    buttonOption2.textContent = 'Play video games';
+    buttonOption2.onclick = getDrumsGames;
 }
 
 /** gets the scene if the user chooses "Practice drums" */
 function getDrumsPractice() {
-    storyText.textContent = "It's time for a gig with your band. Fortunately you've been practicing a lot, so you perform at your \
-    highest level. After the gig an agent approaches the band, he's on the for an new guitarist. \
-    The lead guitarist of your band accepts his offer and quits your band on the spot. This leaves you \
-    completely broken and you soon decides to quit playing drums";
+    storyText.textContent = "Your skills are getting better and better. You come across an ad for a band who’s\
+    searching for a new band member.";
 
-    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
-
-    buttonOption2.style.display = 'none';
+    buttonOption1.textContent = "Think I'll be better off solo";
+    buttonOption1.onclick = getDrumsSolo;
+    
+    buttonOption2.textContent = "Contact the band";
+    buttonOption2.onclick = getDrumsBand;
 }
 
 /** gets the scene if the user chooses "Play video games" */
@@ -141,6 +141,32 @@ function getDrumsGames() {
 
     buttonOption2.style.display = 'none';
 }
+
+/** gets the scene if the user chooses "Think I'll be better off solo" */
+function getDrumsSolo() {
+    storyText.textContent = "You're still getting on as a solo artist, but you'll \
+    need to be a part of something bigger to be able to reach your dreams.";
+
+    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
+    buttonOption1.onclick = refreshPage;
+
+    buttonOption2.style.display = 'none';
+}
+
+/** gets the scene if the user chooses "Practice drums" */
+function getDrumsBand() {
+    storyText.textContent = "It's time for a gig with your band. Fortunately you've been practicing a lot, so you perform at your \
+    highest level. After the gig an agent approaches the band, he's looking for a new guitarist. \
+    The lead guitarist of your band accepts his offer and quits your band on the spot. This leaves you \
+    completely broken and you soon decides to quit playing drums";
+
+    buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
+    buttonOption1.onclick = refreshPage;
+
+    buttonOption2.style.display = 'none';
+}
+
+// FOLLOWING
 
 /** gets the scene if the user chooses "Accept the offer" */
 function getAcceptAgent() {
