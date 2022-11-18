@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", main);
 
-/** FIXA HEARTLESS PARTY - FUNKAR EJ
+/** 
  * FUNKTIONER I BOTTEN? 
 /
 
