@@ -1,11 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
 
-/** 
- * FUNKTIONER I BOTTEN? 
-/
-
-
-
 /** @type {HTMLParagraphElement} shows a p-tag with the current scene */
 let storyText;
 /** @type {HTMLButtonElement} gives the user the first option to choose from in every scene  */
@@ -15,30 +9,53 @@ let buttonOption2;
 /** @type {HTMLImageElement} sets the scene image */
 let displayImage;
 
+let title;
+
 /** Gets the HTML-elements and the start scene */
 function main() {
     getHtmlElements();
     getStartScene();
+    setTitle();
 }
 
 /** Shows the HTML-elements that the function contains of */
 function getHtmlElements() {
+    title = document.getElementById('title');
     storyText = document.getElementById('text-story');
     buttonOption1 = document.getElementById('btn-option1');
     buttonOption2 = document.getElementById('btn-option2');
     displayImage = document.getElementById ('scene-img');
 }
 
+function setTitle() {
+    title.textContent = 'Become a Rockstar';
+}
+
+function setUpButton(value) {
+    if (value === 'Guitar') {
+        buttonOption1.textContent = value;
+        buttonOption1.onclick = getGuitar;
+    } else if (value === 'Drums') {
+        buttonOption2.textContent = value;
+        buttonOption2.onclick = getDrums;
+    } else if (value === 'Practice guitar') {
+        buttonOption1.textContent = value;
+        buttonOption1.onclick = getGuitarPractice;
+    } else if (value === 'Practice drums') {
+        buttonOption2.textContent = value;
+        buttonOption2.onclick = getDrumsPractice;
+    }
+}
+
+
 /** Gets the first scene - the user's first path selection   */
 function getStartScene() {
     storyText.textContent = "This is the first day of your future music career. You're in the music store and you can't \
     decide if you want to start to play guitar or drums.";
 
-    buttonOption1.textContent = 'Guitar';
-    buttonOption1.onclick = getGuitar;
+    setUpButton('Guitar');
+    setUpButton('Drums');
     
-    buttonOption2.textContent = 'Drums';
-    buttonOption2.onclick = getDrums;
 
     buttonOption2.style.display = 'block';
 

@@ -21,11 +21,9 @@ body {
     align-items: center;
 }
 
-h1 {
+.title-style {
     margin-bottom: 1rem;
     color: goldenrod;
-    
-    
 }
 
 .container-story {
