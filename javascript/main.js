@@ -14,8 +14,8 @@ let title;
 /** Gets the HTML-elements and the start scene */
 function main() {
     getHtmlElements();
-    getStartScene();
     setTitle();
+    getStartScene();
 }
 
 /** Shows the HTML-elements that the function contains of */
@@ -31,31 +31,16 @@ function setTitle() {
     title.textContent = 'Become a Rockstar';
 }
 
-function setUpButton(value) {
-    if (value === 'Guitar') {
-        buttonOption1.textContent = value;
-        buttonOption1.onclick = getGuitar;
-    } else if (value === 'Drums') {
-        buttonOption2.textContent = value;
-        buttonOption2.onclick = getDrums;
-    } else if (value === 'Practice guitar') {
-        buttonOption1.textContent = value;
-        buttonOption1.onclick = getGuitarPractice;
-    } else if (value === 'Practice drums') {
-        buttonOption2.textContent = value;
-        buttonOption2.onclick = getDrumsPractice;
-    }
-}
-
-
 /** Gets the first scene - the user's first path selection   */
 function getStartScene() {
     storyText.textContent = "This is the first day of your future music career. You're in the music store and you can't \
     decide if you want to start to play guitar or drums.";
-
-    setUpButton('Guitar');
-    setUpButton('Drums');
     
+    buttonOption1.textContent = 'Guitar';
+    buttonOption1.onclick = getGuitar;
+    
+    buttonOption2.textContent = 'Drums';
+    buttonOption2.onclick = getDrums;
 
     buttonOption2.style.display = 'block';
 
