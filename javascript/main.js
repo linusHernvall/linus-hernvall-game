@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", main);
  * FUNKTIONER I BOTTEN? 
 /
 
+
+
 /** @type {HTMLParagraphElement} shows a p-tag with the current scene */
 let storyText;
 /** @type {HTMLButtonElement} gives the user the first option to choose from in every scene  */
@@ -37,6 +39,8 @@ function getStartScene() {
     
     buttonOption2.textContent = 'Drums';
     buttonOption2.onclick = getDrums;
+
+    buttonOption2.style.display = 'block';
 
     displayImage.src = "./images/music-store.jpg"
 
@@ -78,7 +82,7 @@ function getGuitarGames() {
     storyText.textContent = "A rockstar is not created through playing video games. You need to practice, practice, practice…";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick =  main;
 
     buttonOption2.style.display = 'none';
 
@@ -91,7 +95,7 @@ function getGuitarSolo() {
     need to be a part of something bigger to be able to reach your dreams.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -149,7 +153,7 @@ function getDrumsGames() {
     storyText.textContent = "A rockstar is not created through playing video games. You need to practice, practice, practice…";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -162,7 +166,7 @@ function getDrumsSolo() {
     need to be a part of something bigger to be able to reach your dreams.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -177,7 +181,7 @@ function getDrumsBand() {
     completely broken and you soon decides to quit playing drums.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -206,7 +210,7 @@ function getDeclineAgent() {
     to the next level. The time goes by and your interest in music fades away.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -247,7 +251,7 @@ function getOneMoreMinuteParty() {
     Unluckily the cocaine is spiked with high concentrations of fentanyl and you're dying of an overdose this night.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -260,7 +264,7 @@ function getHeartlessParty() {
     Unluckily the cocaine is spiked with high concentrations of fentanyl and you're dying of an overdose this night.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -273,7 +277,7 @@ function getOneMoreMinuteSleep() {
     never makes it to the top. You end up taking a regular day job and your dream of becoming a rockstar is shattered.";
 
     buttonOption1.textContent = "Try again - It's a long way to the top if you wanna Rock 'N' Roll!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
 
@@ -287,13 +291,9 @@ function getHeartlessSleep() {
     your whole life to what you really love - playing music. Your dreams of becoming a true rockstar are fullfilled!!!";
 
     buttonOption1.textContent = "Let's do this again!";
-    buttonOption1.onclick = refreshPage;
+    buttonOption1.onclick = main;
 
     buttonOption2.style.display = 'none';
     
     displayImage.src = "./images/rockstar.jpeg"
-}
-
-function refreshPage() {
-    window.location.reload();
 }
