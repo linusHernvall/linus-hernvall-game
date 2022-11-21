@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", main);
 
-/** @type {HTMLParagraphElement} shows a p-tag with the current scene */
+/** @type {HTMLParagraphElement} Shows a p-tag with the current scene */
 let storyText;
-/** @type {HTMLButtonElement} gives the user the first option to choose from in every scene  */
+/** @type {HTMLButtonElement} Gives the user the first option to choose from in every scene  */
 let buttonOption1;
-/** @type {HTMLButtonElement} gives the user the second option to choose from in every scene  */
+/** @type {HTMLButtonElement} Gives the user the second option to choose from in every scene  */
 let buttonOption2;
-/** @type {HTMLImageElement} sets the scene image */
+/** @type {HTMLImageElement} Sets the scene image */
 let displayImage;
-
+/** @type {HTMLTitleElement} Sets a H1-tag with a title */
 let title;
 
 /** Gets the HTML-elements and the start scene */
